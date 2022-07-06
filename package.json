@@ -1,6 +1,6 @@
 {
-  "name": "vue-simple-acl",
-  "version": "1.2.0",
+  "name": "@SycamoreEducation/vue-simple-acl",
+  "version": "1.2.1",
   "description": "A simple unopinionated Vue plugin for managing user roles and permissions, access-control list (ACL) and role-based access control (RBAC).",
   "main": "dist/vue-simple-acl.js",
   "browser": "dist/vue-simple-acl.min.js",
@@ -44,7 +44,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/victorybiz/vue-simple-acl"
+    "url": "ssh://git@github.com:SycamoreEducation/vue-simple-acl.git",
+    "directory": "SycamoreEducation/vue-simple-acl"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/SycamoreEducation"
   },
   "keywords": [
     "vue",
