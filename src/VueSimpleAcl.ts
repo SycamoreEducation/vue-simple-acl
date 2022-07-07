@@ -479,9 +479,7 @@ export const installPlugin = <U = User>(app: any, options?: PluginOption<U>) => 
     }
 
     const evaluateRouterAcl = (to: any, from: any, next: any) => {
-      console.warn("META: ", to.meta)
       if (to.meta && (to.meta.can || to.meta.permission || to.meta.role || to.meta.roleOrPermission)) {
-        console.warn("RUNNING CAN")
         const abilities = (to.meta.can || to.meta.permission || to.meta.role || to.meta.roleOrPermission);
         let granted = false;
         if (typeof abilities === 'function') {
@@ -499,7 +497,6 @@ export const installPlugin = <U = User>(app: any, options?: PluginOption<U>) => 
       }
 
       if (to.meta && (to.meta.canAll || to.meta.allCan || to.meta.allPermission || to.meta.allRole || to.meta.allRoleOrPermission)) {
-        console.log("RUNNING CAN ALL")
         const abilities = (to.meta.canAll || to.meta.allCan || to.meta.allPermission || to.meta.allRole || to.meta.allRoleOrPermission);
         let granted = false;
         if (typeof abilities === 'function') {
@@ -516,7 +513,6 @@ export const installPlugin = <U = User>(app: any, options?: PluginOption<U>) => 
 
       }
       if (to.meta && (to.meta.cannot || to.meta.canNot || to.meta.notCan || to.meta.notPermission || to.meta.notRole || to.meta.notRoleOrPermission)) {
-        console.log("RUNNING CANNOT")
         const abilities = (to.meta.cannot || to.meta.canNot || to.meta.notCan || to.meta.notPermission || to.meta.notRole || to.meta.notRoleOrPermission);
         let granted = false;
         if (typeof abilities === 'function') {
@@ -533,7 +529,6 @@ export const installPlugin = <U = User>(app: any, options?: PluginOption<U>) => 
 
       }
       if (to.meta && (to.meta.canAny || to.meta.anyCan || to.meta.anyPermission || to.meta.anyRole|| to.meta.anyRoleOrPermission)) {
-        console.warn("RUNNING CAN ANY")
         const abilities = (to.meta.canAny || to.meta.anyCan || to.meta.anyPermission || to.meta.anyRole|| to.meta.anyRoleOrPermission);
         let granted = false;
         if (typeof abilities === 'function') {
